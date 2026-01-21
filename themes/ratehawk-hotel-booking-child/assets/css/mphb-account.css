@@ -1,0 +1,51 @@
+/* mphb-account.css - modern, minimal styling for account dashboard */
+.mphb-container { max-width: 1100px; margin: 0 auto; padding: 24px; box-sizing: border-box; }
+.mphb-card { background: #fff; border-radius: 12px; box-shadow: 0 6px 18px rgba(18,24,40,0.06); padding: 20px; margin-bottom: 20px; }
+.mphb-dashboard { padding-top: 30px; }
+.mphb-dashboard-header { display:flex; gap:16px; align-items:center; margin-bottom: 12px; }
+.mphb-avatar { width:56px; height:56px; border-radius:50%; background:#0b74de; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:20px; }
+.mphb-dashboard-title h2 { margin:0; font-size:20px; }
+.mphb-subtle { margin:0; color:#666; font-size:14px; }
+
+/* Buttons */
+.mphb-btn { display:inline-block; padding:8px 14px; border-radius:8px; text-decoration:none; border:0; cursor:pointer; background:#0b74de; color:#fff; font-weight:600; transition:all .12s ease; }
+.mphb-btn:hover { transform:translateY(-2px); }
+.mphb-btn-outline { background:transparent; border:1px solid #d7e6fa; color:#0b74de; }
+.mphb-btn-sm { font-size:13px; padding:6px 10px; }
+
+/* Table */
+.mphb-table-wrap { overflow:auto; }
+.mphb-account-bookings { width:100%; border-collapse:collapse; min-width:700px; }
+.mphb-account-bookings thead th { text-align:left; padding:12px 10px; border-bottom:1px solid #eee; color:#333; font-weight:600; }
+.mphb-account-bookings tbody td { padding:12px 10px; border-bottom:1px solid #f6f8fb; vertical-align:middle; color:#333; }
+.booking-status { display:inline-block; margin-top:6px; padding:4px 8px; border-radius:8px; background:#f2f6ff; color:#0b74de; font-size:12px; }
+
+/* Card list for small screens */
+.mphb-card-list { display:none; gap:12px; }
+.mphb-booking-card { border:1px solid #f0f2f6; padding:12px; border-radius:10px; margin-bottom:12px; }
+.mphb-booking-card-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.mphb-booking-card-body div { margin-bottom:6px; color:#444; }
+
+/* Form grid */
+.mphb-form-grid { display:grid; grid-template-columns: repeat(2, 1fr); gap:14px; }
+.mphb-form-grid .mphb-full { grid-column: 1 / -1; }
+.mphb-form-field { display:flex; flex-direction:column; }
+.mphb-label { font-size:13px; margin-bottom:6px; color:#333; }
+.mphb-form-field input, .mphb-form-field select { padding:10px 12px; border-radius:8px; border:1px solid #e6e9ef; background:#fff; font-size:14px; }
+
+/* small helper */
+.mphb-divider { border:none; height:1px; background:#f4f6fb; margin:16px 0; }
+.mphb-form-actions { margin-top:12px; }
+
+/* Pagination */
+.mphb-pagination { margin-top:16px; display:flex; justify-content:center; }
+.mphb-nav-links { display:flex; gap:8px; }
+.page-numbers { display:inline-block; padding:6px 10px; border-radius:6px; background:#f4f7fb; color:#333; text-decoration:none; }
+.page-numbers.current { background:#fbb191; color:#fff; }
+
+/* Responsive */
+@media (max-width: 880px) {
+    .mphb-form-grid { grid-template-columns: 1fr; }
+    .mphb-table-wrap { display:none; } /* hide table on small screens */
+    .mphb-card-list { display:block; } /* show cards */
+}
